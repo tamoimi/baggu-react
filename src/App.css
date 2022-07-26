@@ -1,0 +1,361 @@
+* {margin: 0; padding: 0;}
+#root {background-color: #F3EFDF; white-space:pre-wrap;}
+img {display: block;}
+li {list-style: none;}
+a {text-decoration: none; color: black;}
+html {background-color: #F3EFDF;}
+p {margin-bottom: 0;}
+
+/* header */
+.nav_bar {
+  background-color: #F3EFDF;
+  font-size: 20px;
+}
+.nav_bar .logo {
+  cursor: pointer;
+}
+/* header */
+
+/*---------main_page---------*/
+/* item_box */
+.item_wrap {
+  width: 1320px; height: auto;
+  margin: 0 auto;
+}
+.sub_item_wrap {
+  width: 1320px; height: auto;
+  margin: 100px auto;
+}
+.item_box { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 30px 0;
+}
+.item_box h5 {
+  font-weight: bold;
+  margin: 10px 0;
+}
+.item_box p {
+  font-weight: bold;
+  color: #007157;
+  font-size: 18px;
+}
+.clo-md-3 {
+  width: 290px;
+  position: relative;
+}
+.clo-md-3 img {
+  cursor: pointer;
+}
+.cartIcon {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+.me-auto {
+  font-weight: bold;
+}
+.img_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.img_hover:hover {
+  opacity: 1;
+}
+/* item_box */
+ 
+
+/* visual_main */
+.visual_main {
+  margin-top: 56px;
+  position: relative;
+}
+.visual_main .slogan {
+  position: absolute;
+  top: 50%; left: 22%;
+  transform: translateY(-50%);
+  font-size: 80px;
+  color: white;
+  font-weight: bold;
+}
+/* visual_main */
+
+
+/* items */
+.nav-pills {
+  margin: 80px 0 30px 0;
+  justify-content: center;
+  gap: 30px;
+}
+.nav-pills .nav-link {
+  border: 1px solid black;
+  border-radius: 4px;
+  color: black;
+  width: 150px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.nav-pills .nav-link.active, 
+.nav-pills .show>.nav-link {
+    color: #F3EFDF;
+    background-color: black;
+}
+/* items */
+
+
+/* story_box */
+.story_box {
+  width: 1260px; height: auto;
+  margin: 150px auto 300px auto;
+  display: flex;
+  gap: 30px;
+}
+.story_box .clo-md-3 {
+  position: relative;
+  flex: 1;
+  width: 23%;
+}
+.story_box p {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px; height: 100px;
+  background-color: white;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 30px;
+}
+.story_box .story_hover {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 350px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.story_box .story_img {
+  position: relative;
+}
+.story_box .story_hover:hover {
+  opacity: 0.7;
+  background: linear-gradient( to top, #F3EFDF, black );
+}
+/* story_box */
+
+
+/* promotion */
+.promotion {
+  width: 100%;
+  margin: 80px auto;
+  display: flex;
+}
+.pro_img {
+  flex: 1;
+}
+.txt_box {
+  flex: 2;
+  text-align: center;
+  margin-top: 8%;
+}
+.txt_box .txt {
+  font-weight: bold;
+  font-size: 50px;
+}
+.txt_box .more {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 150px; height: 40px;
+  line-height: 40px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.txt_box .more:hover {
+  background-color: black;
+  color: white;
+}
+/* promotion */
+/*---------main_page---------*/
+
+
+/*---------modal_page---------*/
+.modal {
+  width: 900px; height: 630px;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #F3EFDF;
+  border-radius: 10px;
+  transition: all 0.3s;
+  --bs-modal-width: 800px;
+}
+.modal-content {
+  background-color: transparent;
+  width: 100%; 
+  border: none;
+}
+.modal-header {
+  border-bottom: none;
+}
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.detail_box {
+  display: flex;
+  gap: 30px;
+}
+.detail_img {
+  flex: 1;
+  width: 300px;
+}
+.detail_info {
+  flex: 1;
+}
+.swiper-wrapper {
+  width: 300px;
+}
+.detail_box_01 {
+  margin-top: 30px;
+}
+.detail_box_01 p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007157;
+}
+.price_box {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px dashed #999;
+}
+.detail_info h4 {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 80px;
+}
+.detail_info .total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 30px;
+  text-align: right;
+}
+.detailBtn button {
+  width: 180px; height: 50px;
+  border: 1px solid black;
+  background-color: #F3EFDF;
+  border-radius: 4px;
+  font-size: 18px;
+}
+.detailBtn button:hover {
+  background-color: black;
+  color: #F3EFDF;
+}
+.detailBtn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 170px;
+}
+.count button {
+  width: 30px; height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  line-height: 10px;
+  background-color: #F3EFDF;
+}
+.count {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 60px;
+}
+.swiper-pagination-clickable 
+.swiper-pagination-bullet {
+  background-color: black;
+}
+/*---------modal_page---------*/
+
+
+/*---------cart_page---------*/
+.cartBox {
+  width: 1260px; 
+  margin: 100px auto;
+}
+.total_box {
+  width: 1260px; height: 200px;
+  margin: 100px auto;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+.cartBox button {
+  width: 30px; height: 30px;
+  margin: 0 5px;
+}
+.total {
+  width: 1260px; height: 80px;
+  margin: 0 auto;
+}
+/*---------cart_page---------*/
+
+
+/*---------login_page---------*/
+.loginContainer {
+  width: 100%; height: 1000px;
+  /* background-image: url(../public/images/main_visual_02.png); */
+  margin: 62px auto 30px auto;
+}
+.loginBox {
+  width: 500px; height: 500px;
+  margin: 0 auto;
+  padding-top: 200px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.loginBox button {
+  width: 100px;
+  margin-top: 30px;
+}
+/*---------login_page---------*/
+
+
+/* footer */
+.footer {
+  width: 1260px; height: 280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 100px;
+}
+.footer a {
+  text-decoration: none; color: black;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.footer a:hover {
+  color: #666;
+  transition: 0.3s ease-out;
+}
+.f_box02,
+.f_box03 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+/* footer */
