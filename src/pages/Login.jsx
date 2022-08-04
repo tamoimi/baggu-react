@@ -17,6 +17,7 @@ export default function Login() {
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
       </Form.Group>
 
+      <div className="btnBox">
       <Button variant="dark" type="submit">
         로그인
       </Button>
@@ -24,6 +25,8 @@ export default function Login() {
       <Button variant="dark" type="Input">
         회원가입
       </Button>
+      <p>아이디 / 비밀번호 찾기</p>
+      </div>
     </Form>
     </div>
   )

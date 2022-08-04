@@ -2,9 +2,7 @@ import React, {useState} from 'react';
 import {Tabs, Tab, Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import newProduct from '../components/newProduct';
-import bestItem from '../components/bestItem';
-import story from '../components/Story';
+import data from '../components/Data';
 import { addItem } from './store';
 import { useDispatch } from 'react-redux/es/exports';
 import SwiperCore, { Pagination, Navigation } from "swiper";
@@ -83,15 +81,12 @@ export default function Main(props) {
        <div className='item_wrap'>
         <div className='item_box'>
             {
-             newProduct.map((value, i)=> {
+             data.map((value, i)=> {
+              if(value.id.includes('new')){
                 return (
                     <div className='clo-md-3'>
-                    
-                    
                     <img src={value.image} width='100%'/>
-            
                     <img src={value.hover} onClick={handleShow} width='100%' className='img_hover' />
-                  
                     <h5>{value.title}</h5>
                     <p>{value.price}원</p>
                     <div className="cartIcon" onClick={()=>{
@@ -101,6 +96,7 @@ export default function Main(props) {
                     </div>
                     </div>
                 ) 
+              }
              })
             }
             
@@ -113,8 +109,9 @@ export default function Main(props) {
         <div className='item_wrap'>
          <div className='item_box'>
             {
-             bestItem.map((value, i)=> {
-                return (
+             data.map((value, i)=> {
+              if(value.id.includes('best')){
+                 return (
                     <div className='clo-md-3'>
                     <img src={value.image} width='100%' />
                     <img src={value.hover} onClick={handleShow} width='100%' className='img_hover' />
@@ -127,6 +124,7 @@ export default function Main(props) {
                     </div>
                     </div>
                 )
+              }
              })
             }
         </div>
@@ -150,24 +148,19 @@ export default function Main(props) {
 
     <div className='story_box'>
       {
-        story.map((value, i)=> {
-          return (
+        data.map((value, i)=> {
+          if(value.id.includes('story')){
+            return (
             <div className='clo-md-3'>
-              <img src={`/images/story_0${i+1}.jpg`} className='story_img' width='100%'/>
+              <img src={value.image} className='story_img' width='100%'/>
               <div className='story_hover'></div>
               <p>{value.title}</p>
             </div>
           )
+          }
         })
       }
     </div>
-
-
-    
-
-    
-       
-        
     </div>
   )
 }

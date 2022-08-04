@@ -9,7 +9,7 @@ export default function Cart() {
   const state = useSelector((state)=>{return state})
   const dispatch = useDispatch()
 
-  const sum = 0
+  let sum = 0
 
   return (
     <div>
@@ -17,13 +17,13 @@ export default function Cart() {
        <Table className='cartBox'>
       <thead>
         <tr>
-          <th>#</th>
+          <th>상품번호</th>
           <th>상품이미지</th>
           <th>상품명</th>
           <th>상품가격</th>
           <th>상품갯수</th>
           <th>상품추가</th>
-          <th>총 가격</th>
+          <th>상품 총가격</th>
         </tr>
       </thead>
       <tbody>
@@ -52,16 +52,22 @@ export default function Cart() {
 
                   </td>
                   <td>{state.cart[i].price*state.cart[i].count}원</td>
-                  {sum} = {`${sum}+${state.cart[i].price*state.cart[i].count}`}
-                  
                 </tr> 
-                 </>
+                </>
               )
             })
           }
       </tbody>
+      {
+        state.cart.map((value,i)=>{
+          sum += (state.cart[i].price*state.cart[i].count)
+        })
+      }
       </Table>
-      <p className='total'>합계:{sum}</p>
+      <div className="purBox">
+      <p className='total'>주문금액: {sum}원</p>
+      <button className='purchase'>{sum}원 구매하기</button>
+      </div>
 
     </div>
   )

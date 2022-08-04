@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
+import data from '../components/Data';
 import {Modal} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import sub_img from '../components/Sub_img'
 import { addItem  } from './store';
 import { useDispatch } from 'react-redux/es/exports';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -68,12 +68,10 @@ export default function Sub() {
 <div className='sub_item_wrap'>
         <div className='item_box'>
             {
-             sub_img.map((value, i)=> {
+             data.map((value, i)=> {
+              if(value.id.includes('sub')){
                 return (
                     <div className='clo-md-3'>
-                    
-                    {/* <img src= width='100%'/>
-                    <img src= onClick={handleShow} className='img_hover' width='100%'/> */}
                     <img src={value.image} width='100%'/>
                     <img src={value.hover} width='100%' onClick={handleShow} className='img_hover'/>
                     <h5>{value.title}</h5>
@@ -85,6 +83,7 @@ export default function Sub() {
                     </div>
                     </div>
                 ) 
+              }
              })
             }
         </div>
