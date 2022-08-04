@@ -19,7 +19,7 @@ function App() {
       
     <Navbar className='nav_bar'fixed="top">
         <Container>
-          <Navbar.Brand className='logo' onClick={()=>{navigate('/')}}><img src='/images/logo.png' width='120px'/></Navbar.Brand>
+          <Navbar.Brand className='logo' onClick={()=>{navigate('/')}}><img src='/images/logo.png' alt='logo' width='120px'/></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link onClick={()=>{navigate('/sub')}}>Bag</Nav.Link>
             <Nav.Link onClick={()=>{navigate('/cart')}}>Cart</Nav.Link>
@@ -38,7 +38,7 @@ function App() {
 
     <footer className='footer_wrap'>
       <div className='footer'>
-      <div className='f_box01'><img src='/images/logo.png' width="140px"/></div>
+      <div className='f_box01'><img src='/images/logo.png' alt='logo_img' width="140px"/></div>
       <div className='f_box02'>
           <Link to='#'>회사 소개</Link>
           <Link to='#'>이용 약관</Link>

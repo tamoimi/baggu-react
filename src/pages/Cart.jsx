@@ -1,7 +1,7 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
 import { useSelector, useDispatch } from 'react-redux'
-import { addCount, minusCount, deleteCount } from './store'
+import { addCount, minusCount } from './store'
 
 
 export default function Cart() {
@@ -34,7 +34,7 @@ export default function Cart() {
                 <>
                 <tr key={i}>
                   <td>{state.cart[i].id}</td>
-                  <td><img src={'./images/standard_0'+ (i+1)+'.jpg'} width='100px'/></td>
+                  <td><img src={'./images/standard_0'+ (i+1)+'.jpg'} alt='standard_img' width='100px'/></td>
                   <td>{state.cart[i].title}</td>
                   <td>{state.cart[i].price}원</td>
                   <td>{state.cart[i].count}</td>
@@ -46,10 +46,6 @@ export default function Cart() {
                     <button onClick={()=>{
                       dispatch(addCount(state.cart[i].id))
                     }}>+</button>
-                    {/* <button onClick={()=>{
-                      dispatch(deleteCount(state.cart[i].id))
-                    }}>삭제</button> */}
-
                   </td>
                   <td>{state.cart[i].price*state.cart[i].count}원</td>
                 </tr> 
@@ -59,6 +55,7 @@ export default function Cart() {
           }
       </tbody>
       {
+        // eslint-disable-next-line array-callback-return
         state.cart.map((value,i)=>{
           sum += (state.cart[i].price*state.cart[i].count)
         })

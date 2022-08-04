@@ -37,11 +37,11 @@ export default function Sub() {
       navigation
       pagination={{ clickable: true }}
       >
-      <SwiperSlide><img src="/images/detail_01.jpg" width="100%"/></SwiperSlide>
-      <SwiperSlide><img src="/images/detail_02.jpg" width="100%"/></SwiperSlide>
-      <SwiperSlide><img src="/images/detail_03.jpg" width="100%"/></SwiperSlide>
-      <SwiperSlide><img src="/images/detail_04.jpg" width="100%"/></SwiperSlide>
-      <SwiperSlide><img src="/images/detail_05.jpg" width="100%"/></SwiperSlide>
+      <SwiperSlide><img src="/images/detail_01.jpg" alt='detail_slide_01' width="100%"/></SwiperSlide>
+      <SwiperSlide><img src="/images/detail_02.jpg" alt='detail_slide_02' width="100%"/></SwiperSlide>
+      <SwiperSlide><img src="/images/detail_03.jpg" alt='detail_slide_03' width="100%"/></SwiperSlide>
+      <SwiperSlide><img src="/images/detail_04.jpg" alt='detail_slide_04' width="100%"/></SwiperSlide>
+      <SwiperSlide><img src="/images/detail_05.jpg" alt='detail_slide_05' width="100%"/></SwiperSlide>
       </Swiper>
        </div>
         <div className="detail_info">
@@ -68,12 +68,13 @@ export default function Sub() {
 <div className='sub_item_wrap'>
         <div className='item_box'>
             {
+             // eslint-disable-next-line array-callback-return
              data.map((value, i)=> {
               if(value.id.includes('sub')){
                 return (
                     <div className='clo-md-3'>
-                    <img src={value.image} width='100%'/>
-                    <img src={value.hover} width='100%' onClick={handleShow} className='img_hover'/>
+                    <img src={value.image} alt='item_img' width='100%'/>
+                    <img src={value.hover} alt='item_img_hover' width='100%' onClick={handleShow} className='img_hover'/>
                     <h5>{value.title}</h5>
                     <p>{value.price}원</p>
                      <div className="cartIcon" onClick={()=>{

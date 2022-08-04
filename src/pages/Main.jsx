@@ -30,7 +30,7 @@ export default function Main(props) {
   return (
         <div>
             <div className='visual_main'>
-            <img src='/images/main_visual_01.png' width='100%'/>
+            <img src='/images/main_visual_01.png' alt='main_visual' width='100%'/>
             <p className='slogan'>바꾸는{'\n'}세상을{'\n'}바꾼다!</p>
             </div>
 
@@ -45,11 +45,11 @@ export default function Main(props) {
       pagination={{ clickable: true }}
       navigation
     >
-      <SwiperSlide><img src="/images/detail_01.jpg" width="100%"/></SwiperSlide>
-      <SwiperSlide><img src="/images/detail_02.jpg" width="100%"/></SwiperSlide>
-      <SwiperSlide><img src="/images/detail_03.jpg" width="100%"/></SwiperSlide>
-      <SwiperSlide><img src="/images/detail_04.jpg" width="100%"/></SwiperSlide>
-      <SwiperSlide><img src="/images/detail_05.jpg" width="100%"/></SwiperSlide>
+      <SwiperSlide><img src="/images/detail_01.jpg" alt='detail_slide_01' width="100%"/></SwiperSlide>
+      <SwiperSlide><img src="/images/detail_02.jpg" alt='detail_slide_02' width="100%"/></SwiperSlide>
+      <SwiperSlide><img src="/images/detail_03.jpg" alt='detail_slide_03' width="100%"/></SwiperSlide>
+      <SwiperSlide><img src="/images/detail_04.jpg" alt='detail_slide_04' width="100%"/></SwiperSlide>
+      <SwiperSlide><img src="/images/detail_05.jpg" alt='detail_slide_05' width="100%"/></SwiperSlide>
       </Swiper>
 
        </div>
@@ -81,12 +81,13 @@ export default function Main(props) {
        <div className='item_wrap'>
         <div className='item_box'>
             {
-             data.map((value, i)=> {
+             // eslint-disable-next-line array-callback-return
+             data.map((value, i)=>{
               if(value.id.includes('new')){
                 return (
                     <div className='clo-md-3'>
-                    <img src={value.image} width='100%'/>
-                    <img src={value.hover} onClick={handleShow} width='100%' className='img_hover' />
+                    <img src={value.image} alt="new" width='100%'/>
+                    <img src={value.hover} alt="new_hover" onClick={handleShow} width='100%' className='img_hover' />
                     <h5>{value.title}</h5>
                     <p>{value.price}원</p>
                     <div className="cartIcon" onClick={()=>{
@@ -109,12 +110,13 @@ export default function Main(props) {
         <div className='item_wrap'>
          <div className='item_box'>
             {
+             // eslint-disable-next-line array-callback-return
              data.map((value, i)=> {
               if(value.id.includes('best')){
                  return (
                     <div className='clo-md-3'>
-                    <img src={value.image} width='100%' />
-                    <img src={value.hover} onClick={handleShow} width='100%' className='img_hover' />
+                    <img src={value.image} alt="best" width='100%' />
+                    <img src={value.hover} alt="best_hover" onClick={handleShow} width='100%' className='img_hover' />
                     <h5>{value.title}</h5>
                     <p>{value.price}</p>
                     <div className="cartIcon" onClick={()=>{
@@ -134,7 +136,7 @@ export default function Main(props) {
 
     <div className='promotion'>
       <div className='pro_img'>
-          <img src="/images/promotion_07.jpg" alt="" width="100%"/>
+          <img src="/images/promotion_07.jpg" alt="promotion" width="100%"/>
       </div>
       <div className="txt_box">
       <p className='txt'>바꾸 마스크와 함께{'\n'}새로운 봄을 맞이 하세요!</p>
@@ -142,17 +144,18 @@ export default function Main(props) {
       <span className='more'>자세히 보기</span>
       </div>
       <div className='pro_img'>
-          <img src="/images/promotion_01.jpg" alt="" width="100%" />
+          <img src="/images/promotion_01.jpg" alt="promotion" width="100%" />
       </div>
     </div>
 
     <div className='story_box'>
       {
+        // eslint-disable-next-line array-callback-return
         data.map((value, i)=> {
           if(value.id.includes('story')){
             return (
             <div className='clo-md-3'>
-              <img src={value.image} className='story_img' width='100%'/>
+              <img src={value.image} className='story_img' alt='story_img' width='100%'/>
               <div className='story_hover'></div>
               <p>{value.title}</p>
             </div>
