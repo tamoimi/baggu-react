@@ -93,7 +93,7 @@ export default function Main(props) {
                     <div className="cartIcon" onClick={()=>{
                       dispatch(addItem({id:value.id, image:value.image , title:value.title, price:value.price, count:1}))
                     }}>
-                      <FontAwesomeIcon icon={faShoppingCart}/>
+                      <FontAwesomeIcon icon={faShoppingCart} onClick={function() {alert('장바구니에 추가되었습니다.')}}/>
                     </div>
                     </div>
                 ) 
@@ -118,11 +118,11 @@ export default function Main(props) {
                     <img src={value.image} alt="best" width='100%' />
                     <img src={value.hover} alt="best_hover" onClick={handleShow} width='100%' className='img_hover' />
                     <h5>{value.title}</h5>
-                    <p>{value.price}</p>
+                    <p>{value.price}원</p>
                     <div className="cartIcon" onClick={()=>{
                       dispatch(addItem({id:value.id, image:value.image , title:value.title, price:value.price, count:1}))
                     }}>
-                      <FontAwesomeIcon icon={faShoppingCart}/>
+                      <FontAwesomeIcon icon={faShoppingCart} onClick={function() {alert('장바구니에 추가되었습니다.')}}/>
                     </div>
                     </div>
                 )

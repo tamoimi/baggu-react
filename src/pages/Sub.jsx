@@ -80,7 +80,7 @@ export default function Sub() {
                      <div className="cartIcon" onClick={()=>{
                       dispatch(addItem({id:value.id, image:value.image , title:value.title, price:value.price, count:1}))
                     }}>
-                      <FontAwesomeIcon icon={faShoppingCart}/>
+                      <FontAwesomeIcon icon={faShoppingCart} onClick={function() {alert('장바구니에 추가되었습니다.')}}/>
                     </div>
                     </div>
                 ) 

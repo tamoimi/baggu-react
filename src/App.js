@@ -51,6 +51,17 @@ function App() {
           <Link to='#'>EVENT</Link>
           <Link to='#'>ABOUT US</Link>
       </div>
+      <div className='f_box04'>
+          <p>CONTACT : 1588-8564</p>
+          <span>평일 : 09:00 - 18:00 (점심시간 12:00 - 13:00)</span>{'\n'}
+          <span>고객센터 운영시간에 순차적으로 답변드리겠습니다.</span>{'\n'}
+          <span>토요일, 일요일, 공휴일 휴무</span>{'\n'}
+          <span>통화량이 많을때는 문의 게시판으로 문의주세요.</span>
+      </div>
+      <div className='f_box05'>
+          <Link to='#'><p className='p_box'>문의 게시판</p></Link>
+          <Link to='#'><p className='p_box'>자주 묻는 질문</p></Link>
+      </div>
       </div>
     </footer>
 
